@@ -1,0 +1,40 @@
+Building personalized page rank records
+----------------------------------------
+
+hadoop jar target/INFM750-0.0.1-SNAPSHOT-fatjar.jar edu.umd.nkher.BuildPersonalizedPageRankRecords \
+	-input YelpGraph.txt -output PageRankRecords -numNodes 174094 -sources fHtTaujcyKvXglE33Z5yIw
+	
+Partition Graph
+----------------
+
+hadoop jar target/INFM750-0.0.1-SNAPSHOT-fatjar.jar edu.umd.nkher.PartitionGraph \
+	-input PageRankRecords -output PageRank/iter0000 -numPartitions 5 -numNodes 174094
+
+Run Personalized Page Rank Basic
+---------------------------------
+
+hadoop jar target/INFM750-0.0.1-SNAPSHOT-fatjar.jar edu.umd.nkher.RunPersonalizedPageRankBasic \
+	-base PageRank -numNodes 174094 -start 0 -end 20 -sources fHtTaujcyKvXglE33Z5yIw
+	
+Run Extract Top Personalized PageRankNodes
+----------------------------------------------
+
+hadoop jar target/INFM750-0.0.1-SNAPSHOT-fatjar.jar edu.umd.nkher.ExtractTopPersonalizedPageRankNodes \
+	-input PageRank/iter0020 -top 5 -sources fHtTaujcyKvXglE33Z5yIw	
+
+Check Answers
+--------------
+
+mvn exec:java -Dexec.mainClass=edu.umd.nkher.SequentialPersonalizedPageRank -Dexec.args="-input YelpGraph.txt -source fHtTaujcyKvXglE33Z5yIw"
+
+PageRank of nodes, in descending order:
+0.16042006215684546	fHtTaujcyKvXglE33Z5yIw
+
+Convert to plain text
+-------------------------
+hadoop jar target/INFM750-0.0.1-SNAPSHOT-fatjar.jar edu.umd.nkher.DumpPageRankRecordsToPlainText \
+	-input PageRank/iter0010 -output PageRank-Text
+	
+	
+fHtTaujcyKvXglE33Z5yIw	
+SIBCL7HBkrP4llolm4SC2A	

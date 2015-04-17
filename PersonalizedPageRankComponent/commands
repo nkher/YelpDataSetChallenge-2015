@@ -1,0 +1,35 @@
+Sequential Page Rank
+----------------------
+
+hadoop jar target/INFM750-0.0.1-SNAPSHOT-fatjar.jar edu.umd.nkher.SequentialPageRank -input YelpGraph.txt 
+
+Sequential Personalized Page Rank
+----------------------------------
+
+hadoop jar target/INFM750-0.0.1-SNAPSHOT-fatjar.jar edu.umd.nkher.SequentialPersonalizedPageRank \
+   -input YelpGraph.txt -source 9627181
+      
+Building page rank records-
+----------------------------------
+
+hadoop jar target/INFM750-0.0.1-SNAPSHOT-fatjar.jar edu.umd.nkher.BuildPageRankRecords \
+	-input YelpGraph.txt -output PageRankRecords -numNodes 174094
+	
+	Partition Graph
+-------------------------
+
+hadoop jar target/INFM750-0.0.1-SNAPSHOT-fatjar.jar edu.umd.nkher.PartitionGraph \
+	-input PageRankRecords -output PageRank/iter0000 -numPartitions 5 -numNodes 174094
+
+
+Run Page Rank Basic
+-------------------------
+hadoop jar target/INFM750-0.0.1-SNAPSHOT-fatjar.jar edu.umd.nkher.RunPageRankBasic \
+	-base PageRank -numNodes 174094 -start 0 -end 10
+
+
+Convert to plain text
+-------------------------
+hadoop jar target/INFM750-0.0.1-SNAPSHOT-fatjar.jar edu.umd.nkher.DumpPageRankRecordsToPlainText \
+	-input PageRank/iter0010 -output PageRank-Text
+	
