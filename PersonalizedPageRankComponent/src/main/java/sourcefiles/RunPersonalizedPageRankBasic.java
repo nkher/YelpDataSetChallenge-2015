@@ -343,15 +343,16 @@ public class RunPersonalizedPageRankBasic extends Configured implements Tool {
 
         if (sourcesArray[m].equals(node.getNodeId())) {
           jump = (float) (Math.log(ALPHA));
-          link = (float) (Math.log(1.0f - ALPHA)) + sumLogProbs(p,(float) (Math.log(missingMassArrayList.get(m))));
+          // link = (float) (Math.log(1.0f - ALPHA)) + sumLogProbs(p,(float) (Math.log(missingMassArrayList.get(m))));
           System.out.println(" link : " + link);
         }
 
         else {
           jump = (float) Math.log(0.0f);
-          link = (float) Math.log(1.0f - ALPHA) + p;
+          // link = (float) Math.log(1.0f - ALPHA) + p;
         }
-
+          
+        link = (float) Math.log(1.0f - ALPHA) + p;
         p = sumLogProbs(jump, link);
         prlist.set(m, p);
       }
