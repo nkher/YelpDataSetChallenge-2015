@@ -23,7 +23,6 @@ This program calculates the page rank value for the sources passed. The sources 
 
 <h3>Commands for the above steps are as follows:</h3>
 
-
 <h2>Building personalized page rank records</h2>
 
 hadoop jar target/INFM750-0.0.1-SNAPSHOT-fatjar.jar edu.umd.nkher.BuildPersonalizedPageRankRecords \
