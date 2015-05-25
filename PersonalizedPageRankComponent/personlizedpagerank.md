@@ -24,20 +24,17 @@ This program calculates the page rank value for the sources passed. The sources 
 <h3>Commands for the above steps are as follows:</h3>
 
 
-Building personalized page rank records
-----------------------------------------
+<h2>Building personalized page rank records</h2>
 
 hadoop jar target/INFM750-0.0.1-SNAPSHOT-fatjar.jar edu.umd.nkher.BuildPersonalizedPageRankRecords \
 	-input YelpGraph.txt -output PageRankRecords -numNodes 174094 -sources fHtTaujcyKvXglE33Z5yIw
 	
-Partition Graph
-----------------
+<h2>Partition Graph</h2>
 
 hadoop jar target/INFM750-0.0.1-SNAPSHOT-fatjar.jar edu.umd.nkher.PartitionGraph \
 	-input PageRankRecords -output PageRank/iter0000 -numPartitions 5 -numNodes 174094
 
-Run Personalized Page Rank Basic
----------------------------------
+<h2>Run Personalized Page Rank Basic</h2>
 
 hadoop jar target/INFM750-0.0.1-SNAPSHOT-fatjar.jar edu.umd.nkher.RunPersonalizedPageRankBasic \
 	-base PageRank -numNodes 174094 -start 0 -end 20 -sources fHtTaujcyKvXglE33Z5yIw 
