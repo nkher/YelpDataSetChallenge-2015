@@ -1,0 +1,91 @@
+<! DOCTYPE html>
+<html>
+	<head>
+		<title> Yelp Dataset Challenge</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	</head>
+	<body>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+
+
+		<!-- Standard Navbar code for all pages -->
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<a  href="ydc2015.html" class="navbar-brand"> Yelp Dataset Challenge</a>
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="ydc2015.html" > Home </a></li>
+						<li><a href="aboutus.html"> About Us </a></li>
+						<li><a href="projectlinks.html"> Project Links </a></li>
+						<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Statistical Methods <b class="caret"></b></a>
+							 <ul class="dropdown-menu">
+							 	<li><a href="regression.html"> Regression</a></li>
+							 	<li><a href="classification.html"> Classification </a></li>
+							 	<li><a href="rules.html"> Rules</a></li>
+							 </ul>
+
+						</li>
+
+					</ul>
+				</div>
+
+
+			</div>
+		</div>
+
+		<!-- Main Body Section -->
+		<div class="container">
+			<!--  
+			<div class="jumbotron">
+				<h2> <center>Ego Influence - Impact on Business Ratings or not</center></h2>
+
+			</div>
+			-->
+			<div class="row">
+				<div >
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="page-header">
+								<p class="hello"><b>This section describes about our classifcation problem and how we frame and solve our research question as a classifcation problem. </b></p>
+								<p class="hello"><u>
+									Methodology: 
+								</u></p>	
+									For the classification problem we aim at predicting whether a user has given a review for a business or not which is our first research question itself which is stated <a href="ydc2015.html#rq1"> here</a>. We clean the yelp user, review and business data according to our needs and extract about 155K (userId, businessId) combinations (samples) and mark each sample with a 1 or 0. 1 indicates that the user has reviewed for that business and 0 indicates no review. We try and maintain a near to equal number of samples for both cases. The independent variable in this case is this <i>"Reviewed"</i> variable itself which we call as <i>"Reviewed"</i>. This can either be a 0 or 1. Next we focus on creating our 3 main independent features (Social Influence, Social Sentiment and Closeness with friends in network) which were explained <a href="ydc2015.html#features">here</a>. These features are added on to our final dataset along with some other useful features (from the yelp data set) which include Price of the restaurant, Star ratings it has received and many others which could be driving factors for a person visiting a restaurant. We try to understand how well do our newly created features contribute in answering our research question. By converting all the variables into appropriate binary forms sutiable for classifcation, we train different models on our dataset and to understand the social network. 
+
+								</br></br>
+								<p class="hello"><u>
+									Results:
+								</u></p>
+									After trying out different algorithms on our data we acheived relatively good results for most of them. Our results showed that if a user's friends talk positively about a restaurant and the restaurant is pricey then most likely the user would not review it. Also, on the contrary if the restaurant is average priced and the user's friends have good things to say about the place, then the user would most likely visit the place. This proves our idea that social influence and social sentiments play a huge role in determing whether a person would visit a restaurant or not.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Standard Footer code for all pages -->
+		<div class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="container">
+				<p class="navbar-text pull-left">Site Built by Namesh R. kher   & Sarika S. Hegde</p>
+				<a class="navbar-btn btn-success btn pull-right">Subscribe our Project </a>  
+			</div>
+
+
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,151 @@
+<! DOCTYPE html>
+<html>
+	<head>
+		<title> Yelp Dataset Challenge</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	</head>
+	<body>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+
+
+		<!-- Standard Navbar code for all pages -->
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<a  href="ydc2015.html" class="navbar-brand"> Yelp Dataset Challenge</a>
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="ydc2015.html" > Home </a></li>
+						<li><a href="aboutus.html"> About Us </a></li>
+						<li><a href="projectlinks.html"> Project Links </a></li>
+						<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Statistical Methods <b class="caret"></b></a>
+							 <ul class="dropdown-menu">
+							 	<li><a href="regression.html"> Regression</a></li>
+							 	<li><a href="classification.html"> Classification </a></li>
+							 	<li><a href="rules.html"> Rules</a></li>
+							 </ul>
+
+						</li>
+
+					</ul>
+				</div>
+
+
+			</div>
+		</div>
+
+		<!-- Main Body Section -->
+
+		<div class="container">
+			
+			<!--  
+			<div class="jumbotron">
+				<h2> <center>Ego Influence - Impact on Business Ratings or not</center></h2>
+
+			</div>
+			-->
+
+			<div class="row">
+				<div >
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="page-header">
+								<center><img class="featureImg"  src="img/yelp.png" height="20%" width="25%"></center>
+							<center><h3 class="head"><b><u>Ego Influence : Impact on Business Ratings or not</u></b></h3></center>
+
+							<p class="hello">
+								Yelp is a crowd sourced local business review and social networking site, where users post their reviews about a business using a star rating system on a scale of one to five.
+							</p> 
+
+								<p class="hello">
+								 Our research is based on two things; firstly trying to understand the factors that affect the ratings that a business gets and secondly, since Yelp is a social network in itself, we try to understand how a user who has reviewed a business is influenced by his ego network and if that too could be one of the reasons why a person would prefer going to a restaurant. Often businesses like restaurants take paper based feedback from the customers that visit them. We use the online reviews from Yelp and train a model on it, through which we predict if a user would review or give feedback for a business based on the users friend opinions. 
+								</p>
+
+								<section id="features">
+								<p class="hello">
+								<b>This study is one of the first ones to explore the social network in a website like Yelp. In our research, we define a term Ego Influence as the combination of the following factors: </b>
+									<ul class="hello">
+									 <li><u> Social Influence:  </u></li>
+									 	<p>This feature is a measure of to what extent a user's action/behavior of visting a business (restaurant) is influenced by his/her social network. If most the user's friends visit a joint then would the user also visit that place ?</p>
+									 <li><u> Social Sentiment  </u></li>
+									 	<p>This feature goes a step beyond the first one. It takes into account the opinions of a user's online friend circle and predicts whether the user would visit a place depending on what the user's friend have to say about that place. The opinion could be a positive one or a negative one depending on their reviews. </p>
+									 <li><u> Closeness with friends in network  </u></li>
+									 	<p>This feature gives us another important way to measure whether a user would visit a place depending on how close is she with her network. We define the <i><a href="http://nlp.stanford.edu/projects/pagerank.shtml">Personalized Page Rank</a></i> value of a user to be the closeness of user to her network. </p>
+									</ul>
+							   	</p>
+							   	</section>
+
+							   	<p class="hello"><b>Research Questions: </b></br>
+							   		<section id="rq1">
+							   			<p>
+									   		<i>
+									   			1. Given an ego nodes sentiment score (for a business), his personalized page rank (Closeness) and social influence measure, can we predict if a user has given review or not.
+									   		</i>
+								   		</p></br>
+								   	</section>
+							   		<section id="rq2">
+							   			<p>
+									   		<i>
+									   			2. What factors influence a persons visit to a restaurant ?
+									   		</i>
+								   		</p>
+								   	</section>
+							   	</p>
+
+								<p class="hello"><b>We derived some significant results from our study: </b></p>
+								<p>
+									<ul class="hello">
+										<li>Our regression model suggests that Closeness with your friends (Personalized Page Rank) is a very strong factor that helps predicting the ratings that a business receives. </li>
+										<li>Besides closeness; Price, Average User review count and number of fans that a user has also form good predictors. </li>
+										<li>Our classifier gives 68% accuracy for predicting whether a user will review a restaurant or not depending on influence of his friends.</li>
+									</ul>
+								</p>
+
+								</br>
+								<p>
+									<center>
+										<div class="hello">
+											<b>Goto Yelp Dataset Challenge Web Page.</b>
+										</div>
+										<div>
+											<a href="http://www.yelp.com/dataset_challenge" target="_blank">
+											<img style="border-radius: 15px;" class="featureImg"  src="img/ydcimage.jpg" height="30%" width="30%">
+										</a>
+										</div>
+										<div>
+											<font size = "1">
+											<i>Source: www.columbia.edu, www.google.com</i>
+											</font>
+										</div>
+									</center>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Standard Footer code for all pages -->
+		<div class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="container">
+				<p class="navbar-text pull-left">Site Built by Sarika S. Hegde & Namesh R. Kher</p>
+				<a class="navbar-btn btn-success btn pull-right">Subscribe our Project </a>  
+			</div>
+
+
+		</div>
+
+	</body>
+
+</html>

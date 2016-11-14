@@ -1,0 +1,95 @@
+<! DOCTYPE html>
+<html>
+	<head>
+		<title> Yelp Dataset Challenge</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	</head>
+	<body>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+
+
+		<!-- Standard Navbar code for all pages -->
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<a  href="ydc2015.html" class="navbar-brand"> Yelp Dataset Challenge</a>
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="ydc2015.html" > Home </a></li>
+						<li><a href="aboutus.html"> About Us </a></li>
+						<li><a href="projectlinks.html"> Project Links </a></li>
+						<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" class="active"> Statistical Methods <b class="caret"></b></a>
+							 <ul class="dropdown-menu">
+							 	<li><a href="regression.html"> Regression</a></li>
+							 	<li><a href="classification.html"> Classification </a></li>
+							 	<li><a href="rules.html"> Rules</a></li>
+							 </ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Main Body Section -->
+		<div class="container">
+			<!--  
+			<div class="jumbotron">
+				<h2> <center>Ego Influence - Impact on Business Ratings or not</center></h2>
+
+			</div>
+			-->
+			<div class="row">
+				<div >
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="page-header">
+								<p class="hello"><b>This section describes about our regression problem and how we frame and solve our research question as a regression problem. </b></p>
+								<p class="hello"><u>
+									Methodology: 
+								</u></p>	
+									For the regression problem we aim at identifying the key factors that decide or drive a user to visit a restaurant or review it. This majorly answers our second research question stated <a href="ydc2015.html#rq2"> here</a>. We would not go over the data formation part as some of it is explained in the <a href="classification.html">classification section</a> and more detail could be found <a href="http://www.terpconnect.umd.edu/~nkher/INFM750_Paper.pdf"> here</a>. Moving onto the regression problem, we again build different statistical models on our data set, this time from the regression prespective. The independent variable that we are trying to predict here is the Average stars that a restaurant receives. Since regression is being performed, the variables do not need to be converted into binary forms. As we try and improve our regression forumlae starting from a fairly simple one (stepwise regression) we get the following expression as the best predictor:
+
+									</br></br>
+									<p><i>
+									Business star rating <-
+									Closeness within and ego network + Number of fans a user has + Total number of review counts that the business has received already </br> + the average reviews that the uses has given + Average rating that a user usually gives + How pricey the restaurant is </br>
+									</i></p>
+
+								</br>
+								<p class="hello"><u>
+									Results:
+								</u></p>
+									The results showed that the more the closeness between a user and her friends in the social network, (Personalized Page Rank Score) the ratings are also affected in a positive way (positive correlation). However the other two features that helped in answering our classification problem discussed earlier do not play a major role here and show a negative correlation with the business ratings. 
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Standard Footer code for all pages -->
+		<div class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="container">
+				<p class="navbar-text pull-left">Site Built by Namesh R. kher   & Sarika S. Hegde</p>
+				<a class="navbar-btn btn-success btn pull-right">Subscribe our Project </a>  
+			</div>
+
+
+		</div>
+
+	</body>
+
+</html>

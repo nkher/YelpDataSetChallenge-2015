@@ -1,0 +1,112 @@
+<! DOCTYPE html>
+<html>
+	<head>
+		<title> Yelp Dataset Challenge</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	</head>
+	<body>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+
+
+		<!-- Standard Navbar code for all pages -->
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<a  href="ydc2015.html" class="navbar-brand"> Yelp Dataset Challenge</a>
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="ydc2015.html" > Home </a></li>
+						<li><a href="aboutus.html"> About Us </a></li>
+						<li class="active"><a href="projectlinks.html"> Project Links </a></li>
+						<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Statistical Methods <b class="caret"></b></a>
+							 <ul class="dropdown-menu">
+							 	<li><a href="regression.html"> Regression</a></li>
+							 	<li><a href="classification.html"> Classification </a></li>
+							 	<li><a href="rules.html"> Rules</a></li>
+							 </ul>
+
+						</li>
+
+					</ul>
+				</div>
+
+
+			</div>
+		</div>
+
+
+		<!-- Main Body Section -->
+		<div class="container">
+			<!--  
+			<div class="jumbotron">
+				<h2> <center>Ego Influence - Impact on Business Ratings or not</center></h2>
+
+			</div>
+			-->
+			<div class="row">
+				<div >
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="page-header">
+								<p class="hello">
+
+								</br></br>
+									Below are a few important links for this project which include the link to the source code, the research paper, the intermediary datasets (before merging) and the final data sets (after merging). The intermediary datasets are nothing but our samples (userid, businessid) combinations that we collected in chunks and hence are present in separate files (JSON format). These files do not have some of the fetures that we include from the yelp data set which we add later when merging. We have provided these as this intermediary data is the outcome of the first two parts of code which are the Feature formation component and Personalized Page Rank component. 
+
+									</br></br>
+									<ul>
+										<li>
+											<b>
+											Link to the source code: 
+											</b>
+											<a href="https://github.com/nkher/YelpDataSetChallenge-2015" target="_blank"> Github Link </a>
+										</li></br>
+
+										<li>
+											<b>
+											Link to the paper:
+											</b> 
+											<a href="http://www.terpconnect.umd.edu/~nkher/INFM750_Paper.pdf" target="_blank"> Paper </a>
+										</li></br>
+
+										<li>
+											<b>
+											Link to the datasets: 
+											</b>
+
+											This <a href="" target="_blank"> data </a> is present in separate files that are merged to create the final one on which the statistical modelling is performed. The code to merge can be found  <a href="https://github.com/nkher/YelpDataSetChallenge-2015/blob/master/StatisticalModelling%26AnalysisComponent/Merging_Dataset.R" target="_blank"> here </a>. Link to the final merged datasets: <a href="https://github.com/nkher/YelpDataSetChallenge-2015/tree/master/StatisticalModelling%26AnalysisComponent/data" target="_blank"> dataset after merging </a>. This is the final data over which analysis is done.
+										</li></br>
+
+									</ul>
+									
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Standard Footer code for all pages -->
+		<div class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="container">
+				<p class="navbar-text pull-left">Site Built by Namesh R. kher   & Sarika S. Hegde</p>
+				<a class="navbar-btn btn-success btn pull-right">Subscribe our Project </a>  
+			</div>
+
+
+		</div>
+
+	</body>
+
+</html>
